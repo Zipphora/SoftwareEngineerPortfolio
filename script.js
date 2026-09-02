@@ -45,14 +45,14 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img, .portfolio-box, .contact form', { origin: 'bottom' });
+ScrollReveal().reveal('.home-img, .portfolio-box:not(.placeholder)', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
 
 /*=================== typed js ============*/
 const typed = new Typed('.multiple-text', {
-    strings: ['Front End Developer', 'Tech Enthusiast', 'Software Engineer'],
+    strings: ['Software Engineer', 'Tech Enthusiast', 'Innovation Strategist'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
