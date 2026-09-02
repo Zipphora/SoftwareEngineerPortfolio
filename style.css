@@ -190,47 +190,6 @@ span {
     margin: 2rem 0 3rem;
 }
 
-.services h2 {
-    margin-bottom: 5rem;
-}
-
-.services-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-
-.services-container .services-box {
-    flex: 1 1 30rem;
-    background: var(--second-bg-color);
-    padding: 3rem 2rem 4rem;
-    border-radius: 2rem;
-    text-align: center;
-    border: .2rem solid var(--bg-color);
-    transition: .5s ease;
-}
-
-.services-container .services-box:hover {
-    border-color: var(--main-color);
-    transform: scale(1.02);
-} 
-
-.services-box i {
-    font-size: 7rem;
-    color: var(--main-color);
-}
-
-.services-box h3 {
-    font-size: 2.6rem;
-}
-
-.services-box p {
-    font-size: 1.6rem;
-    margin: 1rem 0 3rem;
-}
-
 .portfolio {
     background: var(--second-bg-color);
 }
@@ -248,14 +207,17 @@ span {
 
 .portfolio-container .portfolio-box {
     position: relative;
+    min-height: 25rem;
     border-radius: 2rem;
     box-shadow: 0 0 1rem var(--bg-color);
     overflow: hidden;
     display: flex;
+    background: var(--second-bg-color);
 }
 
 .portfolio-box img {
     width: 100%;
+    object-fit: cover;
     transition: .5s ease;
 }
 
@@ -282,6 +244,21 @@ span {
 
 .portfolio-box:hover .portfolio-layer {
     transform: translateY(0);
+}
+
+.portfolio-box.placeholder {
+    border: .2rem dashed var(--main-color);
+}
+
+.portfolio-box.placeholder .portfolio-layer {
+    position: static;
+    transform: none;
+    background: var(--second-bg-color);
+    padding: 3rem 2rem;
+}
+
+.portfolio-box.placeholder h4 {
+    color: var(--main-color);
 }
 
 .portfolio-layer h4 {
@@ -398,10 +375,6 @@ span {
         padding: 10rem 3% 2rem;
     }
 
-    .services {
-        padding-bottom: 7rem;
-    }
-
     .portfolio {
         padding-bottom: 7rem;
     }
@@ -466,10 +439,6 @@ span {
     .about img {
         width: 70vw;
         margin-top: 4rem;
-    }
-
-    .services h2 {
-        margin-bottom: 3rem;
     }
 
     .portfolio h2 {
